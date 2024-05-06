@@ -6,7 +6,7 @@
 /*   By: rchan--r <rchan--r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 21:18:23 by rchan--r          #+#    #+#             */
-/*   Updated: 2023/03/30 15:27:44 by rchan--r         ###   ########.fr       */
+/*   Updated: 2024/05/06 15:12:56 by rchan--r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-# if defined __APPLE__
+# if defined(__APPLE__)
 #  define PTR_NULL "0x0"
 # else 
 #  define PTR_NULL "(nil)"

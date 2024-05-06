@@ -6,7 +6,7 @@
 /*   By: rchan--r <rchan--r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 18:46:50 by rchan--r          #+#    #+#             */
-/*   Updated: 2023/04/09 01:28:08 by rchan--r         ###   ########.fr       */
+/*   Updated: 2024/05/06 15:12:42 by rchan--r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	list_cmd_close_fds(t_list *list_cmd, t_close_fd close_fd)
 	if (close_fd >= CW && cmd->fds[WRITE] >= 3 && close(cmd->fds[WRITE]) < 0)
 		return (0);
 	if (list_cmd->next != NULL && close_fd >= NR)
-	{	
+	{
 		cmd = list_cmd->next->content;
 		if (close_fd >= NR && cmd->fds[READ] >= 3 && close(cmd->fds[READ]) < 0)
 			return (0);

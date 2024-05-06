@@ -6,14 +6,14 @@
 /*   By: rchan--r <rchan--r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 19:43:55 by rchan--r          #+#    #+#             */
-/*   Updated: 2023/01/17 14:47:03 by rchan--r         ###   ########.fr       */
+/*   Updated: 2024/05/06 15:13:34 by rchan--r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
 static char	*res_gnl(int r, char *buf, char *res, char **ptr)
-{	
+{
 	free(buf);
 	*ptr = NULL;
 	if (r <= 0 && res != NULL && ft_strlen_end(res, '\0') != 0)
