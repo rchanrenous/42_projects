@@ -1,7 +1,0 @@
-minishell
-**/*.o
-libft/libft.a
-**/*a.out
-src/tags
-tags
-log/*
