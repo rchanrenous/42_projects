@@ -1,5 +1,7 @@
 # So\_long 
 
+![so_long_gameplay](img/so_long_gameplay3.png)
+
 ## Description
 
 So\_long is a graphical project where the goal is to create a 2D video game.
@@ -88,4 +90,5 @@ The `map/` directory contains a couple maps:
 ./so_long maps/map2.ber
 ./so_long maps/map3.ber
 ```
-![so_long_gameplay](img/so_long_gameplay.png)
+![so_long_gameplay](img/so_long_gameplay1.png)
+![so_long_gameplay](img/so_long_gameplay2.png)
