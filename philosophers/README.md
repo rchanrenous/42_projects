@@ -80,14 +80,23 @@ Each philosopher is identified by an integer between 1 and number_of_philosopher
 
 For instance:
 ```
+./philo 4 410 200 200 1
+```
+will output:
+
+![philo_output](img/philo_output.png)
+
+The following visualizer can be very useful to interpret the program output: https://nafuka11.github.io/philosophers-visualizer/ (credit to https://github.com/nafuka11/philosophers-visualizer).
+
+It suffices to copy and paste the output in the web page to get a neat visualisation.
+
+The following examples illustrate different scenarios:
+```
 ./philo 4 399 200 200 # insufficient time for a second eating round
 ./philo 4 400 200 200 # limited time margin for a second eating round (thread synchronization)
 ./philo 4 410 200 200 # simulation ends up finishing after 5 min because of synchronization delays
 ./philo 5 650 200 200 10 # odd number of philosophers, there is execution time randomness due to fork locking 
 ```
 
-The following visualizer can be very useful to interpret the program output: https://nafuka11.github.io/philosophers-visualizer/ (credit to https://github.com/nafuka11/philosophers-visualizer).
-
-It suffices to copy and paste the output in the web page to get a neat visualisation.
 
 
