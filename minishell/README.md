@@ -36,7 +36,7 @@ The program can either be built locally or run in a Docker container.
 
 ### Build locally
 
-First, install docker and the packages from the requirements section, then build the project:
+First, install the packages from the requirements section, then build the project:
 ```
 git clone https://github.com/rchanrenous/42_projects.git 42_projects
 cd minishell
@@ -49,6 +49,8 @@ Next, run the program:
 ```
 
 ### Use the Docker container
+
+First, install and run Docker.
 
 Run the container by building locally the Docker image:
 ```

@@ -4,7 +4,7 @@ CFLAGS 		= -Wall -Wextra -Werror -g3
 LFLAGS		= -lreadline
 
 LIBFT		= libft.a
-DIR_LIBFT	= libft/
+DIR_LIBFT	= ../lib/libft/
 
 DIR_SRC 	= src/
 DIR_OBJ		= obj/
