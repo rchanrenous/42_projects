@@ -5,6 +5,6 @@ RUN apt-get update &&\
 
 RUN git clone https://github.com/rchanrenous/42_projects
 WORKDIR 42_projects/philosophers
-RUN make && make clean
+#RUN make && make clean
 
 CMD ["sleep", "infinity"]
