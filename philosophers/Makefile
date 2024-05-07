@@ -16,12 +16,14 @@ OBJ_DIR	= bin/
 INC		= philo.h
 INC_DIR	= ./
 
+SRC_DIR	= src/
+
 all: 		$(NAME)
 
 $(OBJ_DIR):
 	mkdir $(OBJ_DIR)
 
-$(OBJ_DIR)%.o:	%.c $(INC)
+$(OBJ_DIR)%.o:	$(SRC_DIR)%.c $(INC)
 	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
 $(NAME):			$(OBJ_DIR) $(OBJ)
