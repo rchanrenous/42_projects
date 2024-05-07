@@ -4,10 +4,10 @@ LIB				= -lX11 -lXext
 
 NAME			= so_long
 
-DIR_MLX			= ./minilibx-linux/
+DIR_MLX			= ../lib/minilibx-linux/
 DIR_INC_MLX		= $(DIR_MLX)
 
-DIR_LIBFT		= libft/
+DIR_LIBFT		= ../lib/libft/
 DIR_INC_LIBFT	= $(DIR_LIBFT)include/
 
 DIR_OBJ			= bin/

@@ -28,15 +28,13 @@ Following packages:
 - git
 - make
 
-## Usage
+## Build the project
 
-## Usage
-
-The program can either be built locally or run in a Docker container.
+The program can either be built locally using the source files or run in a Docker container.
 
 ### Build locally
 
-First, install docker and the packages from the requirements section, then build the project:
+First, install packages from the requirements section, then build the project:
 ```
 git clone https://github.com/rchanrenous/42_projects.git 42_projects
 cd philosophers
@@ -44,6 +42,8 @@ make
 ```
 
 ### Use the Docker container
+
+First, install and run Docker.
 
 Run the container by building locally the Docker image:
 ```
@@ -68,7 +68,7 @@ docker stop docker_philosophers
 docker rm docker_philosophers
 ```
 
-### Examples
+## Usage
 
 The generic command to start a simulation is:
 ```
@@ -94,7 +94,9 @@ It suffices to copy and paste the output in the web page to get a neat visualisa
 Taking the previous example:
 ![philo_viz](img/philo_viz.png)
 
-The following examples illustrate different scenarios:
+## Examples
+
+The following commands illustrate different scenarios:
 ```
 ./philo 4 399 200 200 # insufficient time for a second eating round
 ./philo 4 400 200 200 # limited time margin for a second eating round (thread synchronization)

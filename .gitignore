@@ -1,6 +1,7 @@
 minishell/minishell
 **/*.o
-*/libft/libft.a
+**/*.a
 */src/tags
 tags
 philosophers/philo
+so_long/so_long
