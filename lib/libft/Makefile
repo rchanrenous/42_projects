@@ -1,5 +1,5 @@
 CC			= gcc
-CFLAGS		= -Wall -Werror -Wextra -g3
+CFLAGS		= -Wall -Werror -Wextra
 AR			= ar -rc
 
 NAME		= libft.a
@@ -42,7 +42,9 @@ SRC_EXTRA	= get_next_line.c get_next_line_utils.c \
 			  ft_isspace.c ft_str_isspace.c\
 			  ft_strldup.c \
 			  ft_min.c ft_max.c \
-			  ft_strjoin_sep.c ft_strcmp.c
+			  ft_strjoin_sep.c ft_strcmp.c \
+			  find_back_n.c free_strs.c ft_strsdup.c size_strs.c gnl.c
+
 
 SRC_UTILS	= lst_strcmp.c lst_print_str.c lst_no_free.c
 #OBJS		= ${SRCS:.c=.o}

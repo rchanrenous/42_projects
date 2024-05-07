@@ -6,7 +6,7 @@
 /*   By: rchan--r <rchan--r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 19:08:43 by rchan--r          #+#    #+#             */
-/*   Updated: 2023/03/24 19:09:07 by rchan--r         ###   ########.fr       */
+/*   Updated: 2023/07/21 14:12:47 by rchan--r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,11 @@ int		tab_init(char ***tab);
 int		tab_fill(char ***tab, int size);
 void	tab_free(char ***tab);
 void	tab_print(char **tab);
+
+int		find_back_n(char *s);
+void	free_strs(char **strs);
+char	**ft_strsdup(char **strs);
+int		size_strs(char **strs);
+char	*gnl(int fd, char *buff);
 
 #endif
