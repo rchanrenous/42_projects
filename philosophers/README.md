@@ -60,6 +60,7 @@ Open a bash terminal in the container:
 docker run -d -ti philosophers --name docker_philosophers # run the container in detached mode
 docker exec -ti docker_philosophers bash # open a terminal in the container
 ```
+Then you can type in the terminal any command as in the Examples section.
 
 When finished, stop the container:
 ```
@@ -80,15 +81,18 @@ Each philosopher is identified by an integer between 1 and number_of_philosopher
 
 For instance:
 ```
-./philo 4 410 200 200 1
+./philo 4 410 200 200 5
 ```
-will output:
+will output (sample):
 
 ![philo_output](img/philo_output.png)
 
 The following visualizer can be very useful to interpret the program output: https://nafuka11.github.io/philosophers-visualizer/ (credit to https://github.com/nafuka11/philosophers-visualizer).
 
 It suffices to copy and paste the output in the web page to get a neat visualisation.
+
+Taking the previous example:
+![philo_viz](img/philo_viz.png)
 
 The following examples illustrate different scenarios:
 ```
@@ -97,6 +101,3 @@ The following examples illustrate different scenarios:
 ./philo 4 410 200 200 # simulation ends up finishing after 5 min because of synchronization delays
 ./philo 5 650 200 200 10 # odd number of philosophers, there is execution time randomness due to fork locking 
 ```
-
-
-
