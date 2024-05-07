@@ -1,6 +1,6 @@
 # So\_long 
 
-![so_long_gameplay](img/so_long_gameplay3.png)
+![so_long_gameplay1](img/so_long_gameplay1.png)
 
 ## Description
 
@@ -18,6 +18,8 @@ Key features include:
 The project is entirely coded in C language with limited standard library function usage, and uses a Makefile to build the program.
 
 Special care is given to program error management and avoiding memory leaks at all times.
+
+The project is implemented according to Ecole 42's code norm: https://github.com/42School/norminette/tree/a9e1a3dde004b4f997194b3594292a7ee6eb49b3.
 
 ## Requirements
 
@@ -75,6 +77,8 @@ The program takes as input a .ber file which represents the map. The map file is
 
 The map file must be rectangular and closed, that is, surrounded by '1s'. A valid path to finish the game must exist for the map to be valid.
 
+![so_long_map](img/so_long_map.png)
+
 The generic command to launch the game is:
 ```
 ./so_long /path/to/.ber
@@ -90,5 +94,5 @@ The `map/` directory contains a couple maps:
 ./so_long maps/map2.ber
 ./so_long maps/map3.ber
 ```
-![so_long_gameplay](img/so_long_gameplay1.png)
-![so_long_gameplay](img/so_long_gameplay2.png)
+![so_long_gameplay2](img/so_long_gameplay2.png)
+![so_long_gameplay3](img/so_long_gameplay3.png)

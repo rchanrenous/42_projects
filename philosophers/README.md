@@ -75,7 +75,7 @@ The generic command to start a simulation is:
 ./philo number_of_philosophers time_to_die time_to_eat time_to_sleep
 [number_of_times_each_philosopher_must_eat]
 ```
-where each parameter is in milliseconds.
+where the number of philosophers is an integer, each time parameter is in milliseconds.
 
 Each philosopher is identified by an integer between 1 and number_of_philosophers, and the program outputs each new action (eating, sleeping, thinking) taken by a philosopher, starting by the timestamp of the simulation (in ms). 
 

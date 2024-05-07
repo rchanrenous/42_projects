@@ -20,6 +20,7 @@ Key features include:
 The project is entirely coded in C language with limited standard library function usage, and uses a Makefile to build the program.
 
 Special care is given to program error management and avoiding memory leaks at all times.
+
 The project is implemented according to Ecole 42's code norm: https://github.com/42School/norminette/tree/a9e1a3dde004b4f997194b3594292a7ee6eb49b3.
 
 ## Requirements
@@ -75,7 +76,7 @@ docker stop docker_minishell
 docker rm docker_minishell
 ```
 
-### Examples
+## Examples
 
 Finally, have fun trying out shell commands!
 ```
