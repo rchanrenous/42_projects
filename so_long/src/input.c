@@ -6,7 +6,7 @@
 /*   By: rchan--r <rchan--r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 15:46:46 by rchan--r          #+#    #+#             */
-/*   Updated: 2023/01/16 16:56:45 by rchan--r         ###   ########.fr       */
+/*   Updated: 2023/01/18 10:35:23 by rchan--r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,9 @@ char	**map_read(char *filename, int *len_line, int *nb_line)
 	while (line != NULL)
 	{
 		if (ft_strncmp(line, "\0", 1) == 0)
-			return (map_free(&map), NULL);
+			return (free(line), map_free(&map), ft_printf("Error\n"), NULL);
 		if (map_append_line(&map, line) == 0)
-			return (ft_printf("Error\n"), NULL);
+			return (free(line), ft_printf("Error\n"), NULL);
 		line = get_next_line(fd);
 		line_trim_nl(line);
 	}

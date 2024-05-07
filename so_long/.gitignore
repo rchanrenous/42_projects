@@ -1,0 +1,5 @@
+so_long
+*.o
+*.a
+**/tags
+tags

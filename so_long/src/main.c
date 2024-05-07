@@ -6,7 +6,7 @@
 /*   By: rchan--r <rchan--r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 13:01:55 by rchan--r          #+#    #+#             */
-/*   Updated: 2023/01/16 17:00:50 by rchan--r         ###   ########.fr       */
+/*   Updated: 2024/05/07 19:45:56 by rchan--r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	main(int argc, char **argv)
 		return (t_mlx_free(&mlx), 0);
 	mlx_key_hook(mlx->win_ptr, &key_hook, (void *)mlx);
 	mlx_hook(mlx->win_ptr, 17, 0, &close_window, (void *)mlx);
+	mlx_loop_hook(mlx->mlx_ptr, &display_map, (void *)mlx);
 	mlx_loop(mlx->mlx_ptr);
 	t_mlx_free(&mlx);
 }

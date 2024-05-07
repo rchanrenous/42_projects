@@ -6,7 +6,7 @@
 /*   By: rchan--r <rchan--r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 16:49:08 by rchan--r          #+#    #+#             */
-/*   Updated: 2023/01/10 11:22:07 by rchan--r         ###   ########.fr       */
+/*   Updated: 2023/01/17 15:32:29 by rchan--r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,11 @@ static int	map_extend(char ***map)
 	}
 	map_copy(*map, new, (k - 1) * MAP_INIT_SIZE);
 	tmp = new + (k - 1) * MAP_INIT_SIZE;
+	*tmp = NULL;
 	if (map_fill(&tmp, MAP_INIT_SIZE) == 0)
 	{
 		map_free(&new);
-		map_free(map);
+		free(*map);
 		map = NULL;
 		return (0);
 	}

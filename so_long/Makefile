@@ -27,7 +27,6 @@ SRC				= main.c \
 				  map_move.c \
 				  events.c
 
-
 OBJ				= $(addprefix $(DIR_OBJ), $(SRC:.c=.o))
 
 all:			$(NAME)

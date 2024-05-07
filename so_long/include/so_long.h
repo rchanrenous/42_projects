@@ -6,7 +6,7 @@
 /*   By: rchan--r <rchan--r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 15:54:49 by rchan--r          #+#    #+#             */
-/*   Updated: 2023/01/16 16:53:20 by rchan--r         ###   ########.fr       */
+/*   Updated: 2024/05/07 19:45:48 by rchan--r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 # define SO_LONG_H
 
 # include <fcntl.h>
+# include <X11/keysym.h>
 
 # include "libft.h"
 # include "ft_printf.h"
 # include "get_next_line.h"
 # include "mlx.h"
-
-# define malooc(...) NULL
 
 # define MAP_INIT_SIZE 10
 
@@ -28,10 +27,6 @@
 
 # ifndef COLOR
 #  define COLOR 65280
-# endif
-
-# ifndef ESC
-#  define ESC 65307
 # endif
 
 # ifndef IMG_WU
@@ -140,6 +135,7 @@ typedef struct s_mlx
 
 int		key_hook(int keycode, void *param);
 int		close_window(void *param);
+int		display_map(void *param);
 
 int		init_so_long(t_mlx **mlx, char *filename);
 int		filename_valid(char *filename);
@@ -165,4 +161,5 @@ int		img_valid_dimensions(t_mlx *mlx);
 
 void	inside_to_window(t_mlx *m, int kc, int i, int j);
 int		map_to_window(t_mlx *mlx, char **map, int keycode);
+
 #endif
