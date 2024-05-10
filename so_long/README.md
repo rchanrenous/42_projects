@@ -88,7 +88,7 @@ The game uses the 'W', 'A', 'S', 'D' keys to move (use 'Z', 'Q', 'S', 'D' keys o
 
 ### Examples
 
-The `map/` directory contains a couple maps:
+The `map/` directory contains a couple of maps:
 ```
 ./so_long maps/map.ber
 ./so_long maps/map2.ber
