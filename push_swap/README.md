@@ -36,6 +36,98 @@ Special care is given to program error management and avoiding memory leaks at a
 
 The project is implemented according to Ecole 42's code norm: https://github.com/42School/norminette/tree/a9e1a3dde004b4f997194b3594292a7ee6eb49b3.
 
+
+
+## Requirements
+
+Following packages:
+- gcc
+- git
+- make
+
+## Build the project
+
+The program can either be built locally using the source files or run in a Docker container.
+
+### Build locally
+
+First, install the packages from the requirements section, then build the project:
+```
+git clone https://github.com/rchanrenous/42_projects.git 42_projects
+cd push_swap
+make
+```
+
+### Use the Docker container
+
+First, install and run Docker.
+
+Run the container by building locally the Docker image:
+```
+docker build -t push_swap .
+docker run -d -ti push_swap
+```
+or by pulling the image from DockerHub:
+```
+docker pull rchanrenous/push_swap:latest
+docker run -d -ti rchanrenous/push_swap:latest
+```
+Open a bash terminal in the container:
+```
+docker run -d -ti --name docker_push_swap # run the container in detached mode
+docker exec -ti docker_push_swap bash # open a terminal in the container
+```
+Then you can type in the terminal the command to launch the program (see Usage section).
+
+When finished, stop the container:
+```
+docker stop docker_push_swap
+docker rm docker_push_swap
+```
+
+## Usage
+
+The program takes a list of integer values as arguments. There must not be any duplicate values in the list (it results in an error otherwise).
+
+Here is a sample command to run the program:
+```
+./push_swap 1 4 6 5 2 3
+```
+
+The checker program reads from the standard input the instructions, and requires the same input list of integers as the `push_swap` program:
+```
+./push_swap 1 4 6 5 2 3 | ./checker 1 4 6 5 2 3
+```
+
+The following command will generate random an input list of integers in the specified range (here, the set of integers between 1 and 10):
+```
+ARG=$(ruby -e "puts (1..10).to_a.shuffle.join(' ')")
+```
+
+Combining the the commands:
+```
+ARG=$(ruby -e "puts (1..10).to_a.shuffle.join(' ')")
+./push_swap $ARG
+./push_swap $ARG | ./checker $ARG
+```
+
+And the number of instructions to sort the integers can be counted as follow:
+```
+./push_swap $ARG | wc -l
+```
+
+### Examples
+
+
+```
+./so_long maps/map.ber
+./so_long maps/map2.ber
+./so_long maps/map3.ber
+```
+![so_long_gameplay2](img/so_long_gameplay2.png)
+![so_long_gameplay3](img/so_long_gameplay3.png)
+
+
 ## Sorting algorithm
 
 The sorting problem introduced in this project is quite atypical compared to classical sorting problems using lists for instance.
@@ -112,93 +204,3 @@ Let us explain why:
 
 #### Choice of the batch sizes
 
-
-
-## Requirements
-
-Following packages:
-- gcc
-- git
-- make
-
-## Build the project
-
-The program can either be built locally using the source files or run in a Docker container.
-
-### Build locally
-
-First, install the packages from the requirements section, then build the project:
-```
-git clone https://github.com/rchanrenous/42_projects.git 42_projects
-cd 
-make
-```
-
-### Use the Docker container
-
-First, install and run Docker.
-
-Run the container by building locally the Docker image:
-```
-docker build -t  .
-docker run -d -ti
-```
-or by pulling the image from DockerHub:
-```
-docker pull rchanrenous/:latest
-docker run -d -ti rchanrenous/:latest
-```
-Open a bash terminal in the container:
-```
-docker run -d -ti --name docker_ # run the container in detached mode
-docker exec -ti docker_ bash # open a terminal in the container
-```
-Then you can type in the terminal any command as in the Examples section.
-
-When finished, stop the container:
-```
-docker stop docker_
-docker rm docker_
-```
-
-## Usage
-
-The program takes a list of integer values as arguments. There must not be any duplicate values in the list (it results in an error otherwise).
-
-Here is a sample command to run the program:
-```
-./push_swap 1 4 6 5 2 3
-```
-
-The checker program reads from the standard input the instructions, and requires the same input list of integers as the `push_swap` program:
-```
-./push_swap 1 4 6 5 2 3 | ./checker 1 4 6 5 2 3
-```
-
-The following command will generate random an input list of integers in the specified range (here, the set of integers between 1 and 10):
-```
-ARG=$(ruby -e "puts (1..10).to_a.shuffle.join(' ')")
-```
-
-Combining the the commands:
-```
-ARG=$(ruby -e "puts (1..10).to_a.shuffle.join(' ')")
-./push_swap $ARG
-./push_swap $ARG | ./checker $ARG
-```
-
-And the number of instructions to sort the integers can be counted as follow:
-```
-./push_swap $ARG | wc -l
-```
-
-### Examples
-
-
-```
-./so_long maps/map.ber
-./so_long maps/map2.ber
-./so_long maps/map3.ber
-```
-![so_long_gameplay2](img/so_long_gameplay2.png)
-![so_long_gameplay3](img/so_long_gameplay3.png)
