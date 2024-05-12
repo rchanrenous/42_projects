@@ -7,3 +7,5 @@ philosophers/philo
 so_long/so_long
 cub3D/cub3D
 **/*.d
+push_swap/push_swap
+push_swap/checker
