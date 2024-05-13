@@ -143,7 +143,7 @@ Next, the values are inserted back in stack a, by order of number of operations 
 
 The fact that elements are gathered in batches in step 1 limits the number of operations to insert consecutive values: once a value is inserted, the values at the top and/or bottom of stack b are close to that value, unless it was the last value from its batch. In case there are no values left in stack b from the previous batch, the next value batch will be at the top and/or bottom of stack b, and the insertion of the next value will be guided by the ordering of the batches.
 
-The batch structure defined in step 1 is crucial to an effecient insertion of the elements back into stack a.
+The batch structure defined in step 1 is crucial to an efficient insertion of the elements back into stack a.
 
 ### Complexity of the algorithm
 
@@ -162,7 +162,7 @@ Let *n* be the number of integers to be sorted in an instance of the *push_swap*
 
 Overall the complexity of step 1 is the sum of the successive batch gathering processes as the number of elements in stack a decreases. There are log2(n) batches. Pushing the elements from the largest batch being computationally heavier and requiring more stack instructions when the number of elements is higher, the complexity of step 1 can be upper-bounded by O(log2(n) n²) in terms of execution time and O(log2(n) n) stack instructions.
 
-However, ranking the values to find the median could probably be done differently since it is independant of the stack data structure constraint. One could use auxiliary data structures and perform a merge sort to complete this step, resulting in a O(log(n)² n) time complexity instead, and also an extra memory use.
+However, ranking the values to find the median could probably be done differently since it is independent of the stack data structure constraint. One could use auxiliary data structures and perform a merge sort to complete this step, resulting in a O(log(n)² n) time complexity instead, and also an extra memory use.
 
 **Step 2**:
 

@@ -38,7 +38,7 @@ ${LIBFT}:
 ${NAME}:	${LIBFT} ${OBJS} ${OBJS_PS} ${CHECKER}
 			${CC} ${CFLAGS} ${OBJS} ${OBJS_PS} -o ${NAME} -I${DIR_INCLUDE} -L${DIR_LIBFT} -lft 
 
-${CHECKER}:	${NAME} ${OBJS_CHECKER} 
+${CHECKER}:	${OBJS_CHECKER} 
 			${CC} ${CFLAGS} ${OBJS} ${OBJS_CHECKER} -o ${CHECKER} -I${DIR_INCLUDE} -L${DIR_LIBFT} -lft 
 
 clean:

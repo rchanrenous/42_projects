@@ -1,5 +1,5 @@
 push_swap
-*/*.o
+**/*.o
 */*.a
 tags
 */tags
