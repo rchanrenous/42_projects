@@ -34,42 +34,13 @@ Following packages:
 
 ## Build the project
 
-The program can either be built locally using the source files or run in a Docker container.
-
-### Build locally
+The project requires interfacing with the X windowing system, therefore the project should be run either locally or in a virtual machine.
 
 First, install the packages from the requirements section, then build the project:
 ```
 git clone https://github.com/rchanrenous/42_projects.git 42_projects
 cd cub3D
 make
-```
-
-### Use the Docker container
-
-First, install and run Docker.
-
-Run the container by building locally the Docker image:
-```
-docker build -t  .
-docker run -d -ti
-```
-or by pulling the image from DockerHub:
-```
-docker pull rchanrenous/:latest
-docker run -d -ti rchanrenous/:latest
-```
-Open a bash terminal in the container:
-```
-docker run -d -ti --name docker_ # run the container in detached mode
-docker exec -ti docker_ bash # open a terminal in the container
-```
-Then you can type in the terminal any command as in the Examples section.
-
-When finished, stop the container:
-```
-docker stop docker_
-docker rm docker_
 ```
 
 ## Usage

@@ -1,0 +1,4 @@
+cub3D
+bin/*.o
+tags
+**/tags
