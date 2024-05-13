@@ -4,7 +4,7 @@
 
 Minishell is a shell program. This project aims at getting familiar with unix-based systems and understand how shell commands work.
 
-In particular, it required understanding how the commands are parsed and interpreted, and how programs are launched.
+In particular, it requires understanding how the commands are parsed and interpreted, and how programs are launched.
 
 Minishell's behavior is based on Bash behavior.
 
@@ -15,7 +15,7 @@ Key features include:
 - manage environment variables
 - handle pipes and redirections
 - manage a command history
-- built-in function implementations: `echo` and `-n` option, `cd`, `pwd`, `exit`  
+- built-in function implementations: `echo` with `-n` option, `cd`, `pwd`, `exit`  
 
 The project is entirely coded in C language with limited standard library function usage, and uses a Makefile to build the program.
 

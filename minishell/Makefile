@@ -7,7 +7,7 @@ LIBFT		= libft.a
 DIR_LIBFT	= ../lib/libft/
 
 DIR_SRC 	= src/
-DIR_OBJ		= obj/
+DIR_OBJ		= bin/
 DIR_INC		= include/
 DIR_INC_LIBFT	= $(DIR_LIBFT)include/
 

@@ -1,0 +1,4 @@
+minishell
+bin/*.o
+tags
+**/tags	 
