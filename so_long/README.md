@@ -34,7 +34,7 @@ Following packages:
 
 ## Build the project
 
-The project requires interfacing with the X windowing system, therefore the project needs to be run in a Linux operating system (using a virtual machine if necessary).
+The project requires interfacing with the X windowing system, therefore it needs to be run in a Linux operating system (using a virtual machine if necessary).
 
 First, install the packages from the requirements section, then build the project:
 ```
