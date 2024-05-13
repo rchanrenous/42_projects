@@ -14,6 +14,7 @@ An internal graphical library from Ecole 42 is provided to interface with the X 
 Key features include:
 - reading and checking input maps to create the gameplay
 - handling keyboard and mouse events to play the video game
+- count and display in the game window the number of moves of the player
 
 The project is entirely coded in C language with limited standard library function usage, and uses a Makefile to build the program.
 
@@ -33,42 +34,13 @@ Following packages:
 
 ## Build the project
 
-The program can either be built locally using the source files or run in a Docker container.
-
-### Build locally
+The project requires interfacing with the X windowing system, therefore the project should be run either locally or in a virtual machine.
 
 First, install the packages from the requirements section, then build the project:
 ```
 git clone https://github.com/rchanrenous/42_projects.git 42_projects
 cd so_long
 make
-```
-
-### Use the Docker container
-
-First, install and run Docker.
-
-Run the container by building locally the Docker image:
-```
-docker build -t so_long .
-docker run -d -ti so_long
-```
-or by pulling the image from DockerHub:
-```
-docker pull rchanrenous/so_long:latest
-docker run -d -ti rchanrenous/so_long:latest
-```
-Open a bash terminal in the container:
-```
-docker run -d -ti so_long --name docker_so_long # run the container in detached mode
-docker exec -ti docker_so_long bash # open a terminal in the container
-```
-Then you can type in the terminal any command as in the Examples section.
-
-When finished, stop the container:
-```
-docker stop docker_so_long
-docker rm docker_so_long
 ```
 
 ## Usage
