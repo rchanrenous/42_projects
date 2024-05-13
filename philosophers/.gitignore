@@ -1,0 +1,4 @@
+philo
+bin/*.o
+tags
+**/tags

@@ -4,14 +4,14 @@
 
 Philosophers is a project inspired by the philosophers' problem, where philosophers are seated around a table to have lunch, but have to take turns to eat because there isn't enough forks for everybody. In particular, there is a fork between each philosopher at the table, and it takes two forks to be able to eat.
 
-The philosophers are either in one of three states: eating, sleeping or thinking. Philosophers can eat if their left and right forks are available simulateanously ; they keep them to themselves until they are done eating, and go to sleep. Once they have slept long enough, they start thinking until they can eat again. A philosopher dies if they haven't finished eating since their last lunch for a given amount of time. 
+The philosophers are either in one of three states: eating, sleeping or thinking. Philosophers can eat if their left and right forks are available simultaneously; they keep them to themselves until they are done eating, and go to sleep. Once they have slept long enough, they start thinking until they can eat again. A philosopher dies if they haven't finished eating since their last lunch for a given amount of time. 
 
 The goal of this project is to simulate scenarios with given number of philosophers, time to eat and time to sleep. The simulations end when a philosopher starves, or if a number of times the philosophers have to eat is specified and is reached for each philosopher.
 
 This project teaches about threading and memory access control.
 
 Key features include: 
-- runnning as many threads as there are philosophers to mimic the philosophers' interactions
+- running as many threads as there are philosophers to mimic the philosophers' interactions
 - defining shared memory between the threads to represent the forks, by using mutex variables
 - defining critical sections where the shared memory can only be accessed one thread at a time 
 
@@ -48,7 +48,7 @@ First, install and run Docker.
 Run the container by building locally the Docker image:
 ```
 docker build -t philosophers .
-docker run  -d -ti philosophers
+docker run -d -ti philosophers
 ```
 or by pulling the image from DockerHub:
 ```
@@ -77,7 +77,7 @@ The generic command to start a simulation is:
 ```
 where the number of philosophers is an integer, each time parameter is in milliseconds.
 
-Each philosopher is identified by an integer between 1 and number_of_philosophers, and the program outputs each new action (eating, sleeping, thinking) taken by a philosopher, starting by the timestamp of the simulation (in ms). 
+Each philosopher is identified by an integer between 1 and *number_of_philosophers*, and the program outputs each new action (eating, sleeping, thinking) taken by a philosopher, starting by the timestamp of the simulation (in ms). 
 
 For instance:
 ```
@@ -89,7 +89,7 @@ will output (sample):
 
 The following visualizer can be very useful to interpret the program output: https://nafuka11.github.io/philosophers-visualizer/ (credit to https://github.com/nafuka11/philosophers-visualizer).
 
-It suffices to copy and paste the output in the web page to get a neat visualisation.
+It suffices to copy and paste the output in the web page to get a neat visualization.
 
 Taking the previous example:
 ![philo_viz](img/philo_viz.png)
@@ -100,6 +100,6 @@ The following commands illustrate different scenarios:
 ```
 ./philo 4 399 200 200 # insufficient time for a second eating round
 ./philo 4 400 200 200 # limited time margin for a second eating round (thread synchronization)
-./philo 4 410 200 200 # simulation ends up finishing after 5 min because of synchronization delays
+./philo 4 410 200 200 # simulation ends up finishing (despite sufficient time margin to share the resources) because of synchronization delays
 ./philo 5 650 200 200 10 # odd number of philosophers, there is execution time randomness due to fork locking 
 ```
